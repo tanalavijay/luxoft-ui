@@ -1,0 +1,27 @@
+<div fxLayout="row wrap" #resizedDiv>
+  <div class="flex-p w-100">
+    <div fxLayout="row wrap">
+      <div class="table-responsive topmargin">
+        <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+            <tr class="tr-grid-header">
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="showEmpty">
+              <td colspan="3" class="showEmptyClass">No records found</td>
+            </tr>
+            <tr *ngFor="let user of users">
+              <td>{{user.user_name}}</td>
+              <td>{{user.user_email}}</td>
+              <td>{{user.user_role}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
